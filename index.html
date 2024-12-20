@@ -30,10 +30,36 @@
             return "draw"
         }
     }
-    console.log (getComputerChoice());
+    //console.log (getComputerChoice());
+
+    function getHumanChoice(choice){
+      let answer = prompt("input your value")
+      
+      if(choice === getComputerChoice()){
+        return "draw"
+      }
+      else if(choice === "rock" && getComputerChoice() === "paper") {
+        return "you lose"
+      }
+      else if(choice === "rock" && getComputerChoice() === "scissors") {
+        return "you win"
+      }
+      else if(choice === "paper" && getComputerChoice() === "scissors") {
+        return "you lose"
+      }
+      else if(choice === "paper" && getComputerChoice() === "rock") {
+        return "you win"
+      }
+      else if(choice === "scissors" && getComputerChoice() === "paper") {
+        return "you win"
+      }
+      else if(choice === "scissors" && getComputerChoice() === "rock") {
+        return "you lose"
+      }
+
+    }
 
 
-    console.log();
   </script>
 </body>
 
