@@ -30,34 +30,56 @@
             return "draw"
         }
     }
-    //console.log (getComputerChoice());
 
-    function getHumanChoice(choice){
-      let answer = prompt("input your value")
+     function getHumanChoice(value) {
+      value = value.toLowerCase();
+      switch(value) {
+        case "rock":
+          return "rock";
+        case "paper":
+          return "paper";
+        case "scissors":
+          return "scissors";
+        default:
+          return "invalid";
+      }
+    }
+     let answer = getHumanChoice(prompt("input your value"));
+  
+  
+
+    let humanScore = 0;
+    let computerScore = 0;
+    
+    function playRound(choice){
       
-      if(choice === getComputerChoice()){
+      let ComputerChoice = getComputerChoice();
+
+            if(choice === ComputerChoice){
         return "draw"
       }
-      else if(choice === "rock" && getComputerChoice() === "paper") {
+      else if(choice === "rock" && ComputerChoice === "paper") {
         return "you lose"
       }
-      else if(choice === "rock" && getComputerChoice() === "scissors") {
+      else if(choice === "rock" && ComputerChoice === "scissors") {
         return "you win"
       }
-      else if(choice === "paper" && getComputerChoice() === "scissors") {
+      else if(choice === "paper" && ComputerChoice === "scissors") {
         return "you lose"
       }
-      else if(choice === "paper" && getComputerChoice() === "rock") {
+      else if(choice === "paper" && ComputerChoice === "rock") {
         return "you win"
       }
-      else if(choice === "scissors" && getComputerChoice() === "paper") {
+      else if(choice === "scissors" && ComputerChoice === "paper") {
         return "you win"
       }
-      else if(choice === "scissors" && getComputerChoice() === "rock") {
+      else if(choice === "scissors" && ComputerChoice === "rock") {
         return "you lose"
       }
-
+      
     }
+
+   
 
 
   </script>
